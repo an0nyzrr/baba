@@ -54,10 +54,12 @@ async def cmd_start(message: Message) -> None:
     await message.answer(
         f"<b>{config.APP_NAME}</b>\n"
         f"Мод на TikTok — разработка {config.TEAM_NAME}, кодер {config.CODER_NAME}.\n\n"
-        f"Канал: {config.CHANNEL}\n"
-        f"Купить/донат: напиши сюда, тебя рассмотрят вручную.\n\n"
-        f"Команда <code>/donate ваш_tiktok_ник</code> поставит заявку "
-        f"в очередь на галочку.",
+        f"Канал: {config.CHANNEL}\n\n"
+        f"💳 <b>Донат на галочку:</b>\n"
+        f"https://dalink.to/nyzer\n\n"
+        f"В комментарии к донату обязательно укажи свой Telegram-юзернейм (@ник), "
+        f"чтобы я нашёл заявку.\n\n"
+        f"После доната напиши /donate ваш_tiktok_ник — галочка выдаётся после подтверждения.",
         parse_mode=ParseMode.HTML,
     )
 
