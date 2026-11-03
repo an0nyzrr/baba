@@ -1,0 +1,15 @@
+[Unit]
+Description=SpidTok server (badges http + telegram bot)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=spidtok
+WorkingDirectory=/opt/spidtok
+EnvironmentFile=/opt/spidtok/.env
+ExecStart=/usr/bin/python3 /opt/spidtok/main.py
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
